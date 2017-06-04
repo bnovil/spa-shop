@@ -5,7 +5,7 @@
     <span class="subfield J_subfield" @click="openMenuEvent">
       <i class="subfield-btn"></i>
     </span>
-    <p class="title">上衣</p>
+    <p class="title">商品</p>
     <span class="badge icon-uniE810 badge-car" v-link="{name:'cart'}"></span>
   </header>
 

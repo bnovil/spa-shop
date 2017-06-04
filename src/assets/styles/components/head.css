@@ -39,7 +39,8 @@
   border-radius: 1px;
   height: 30px;
   line-height: 30px;
-  top: 7px;
+  width:55%;
+  top: 22px;
   border: 1px #f3f3f3 solid;
   background: #ececec url("../../images/home/search.png") 2px center no-repeat;
   background-size: 17px 15px;

@@ -90,6 +90,7 @@
       background-position: 0 0
     }
   }
+
   .ui-loading-wrap .mask {
     position: absolute;
     width: 100px;
@@ -103,6 +104,7 @@
     -webkit-animation: loadingPlus 400ms steps(1) infinite;
     animation: loadingPlus 400ms steps(1) infinite;
   }
+
   .ui-loading-wrap {
     position: fixed;
     top: 0;
@@ -118,6 +120,6 @@
 
 <script>
   export default {
-    props:['show']
+    props: ['show']
   }
 </script>

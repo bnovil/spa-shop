@@ -13,7 +13,9 @@
         <a href="javascript:;" class="search-enter-btn J_search_btn"></a>
       </div>
     </form>
+    <div>
     <span class="badge icon-uniE810 badge-car" v-link="{name:'cart'}"></span>
+    </div>
   </header>
 
 </template>
