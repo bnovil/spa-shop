@@ -2,6 +2,7 @@
 .idea
 node_modules/
 dist/
+build/
 npm-debug.log
 selenium-debug.log
 test/unit/coverage
