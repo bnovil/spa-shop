@@ -1,16 +1,15 @@
-# 蘑菇街移动端Vue-SPA(纯属个人玩法,不用于商务)
-# vue-shopping
+# 移动端SPA电商
+# spa-shop
 ========
 
-## [Live demo](http://andylei18.github.io/vue-shopping/)
-## 安装：
+## 安装项目依赖：
   <pre>npm install</pre>
 ## 运行：
   <pre>npm run dev</pre>
 ## 发布：
   <pre>npm run build</pre>
 ## 地址:
-  <pre>http://localhost:8888</pre>
+  <pre>http://localhost:8000</pre>
 ## 目录结构
 <pre>
 ├─  .gitignore          # 忽略无需git控制的文件  比如 node_modules
@@ -57,10 +56,4 @@ vue-router,
 vue-cli,
 webpack,
 Es6,
-
-
-##感谢
-
-感谢蘑菇街
-感谢尤大,感谢Vuejs
 
