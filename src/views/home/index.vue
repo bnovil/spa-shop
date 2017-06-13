@@ -11,12 +11,12 @@
 
     <!--头部组件-->
     <head-module></head-module>
-    <!--首页登陆组件-->
-    <login-module :loginpic="loginpic"></login-module>
+    <!--&lt;!&ndash;首页登陆组件&ndash;&gt;-->
+    <!--<login-module :loginpic="loginpic"></login-module>-->
     <!--中心数据组件-->
     <views-module :goods="goodslist" :markets="marketslist"></views-module>
-    <!--广告组件-->
-    <down-module></down-module>
+    <!--&lt;!&ndash;广告组件&ndash;&gt;-->
+    <!--<down-module></down-module>-->
   </div>
 </template>
 
@@ -35,71 +35,71 @@
   import ViewsModule from '../../views/home/views.vue'//中心数据组件
 
   export default {
-      data() {
-          return {
-             mask:false,
-             loadding:{
-               show:true
-             },
-             loginpic:"",
-             menu:{
-               show:false,
-               list:[]
-             },
-             marketslist:[],                      //特色市场模块数据
-             goodslist:[]                         //全部市场模块数据
-          }
-      },
-      components: {
-         Cover,Mask,Menuleft,HeadModule,LoginModule,ViewsModule,DownModule
-      },
-      route: {
-        data (transition) {
-          const self = this
-          //请求列表全部数据
-          self.getAjax(transition)
-          //滚动加载
-          //self.scrollList();
+    data() {
+      return {
+        mask: false,
+        loadding: {
+          show: true
         },
-        deactivate (transition) {
-          //$(window).off('scroll');
-          transition.next()
-        }
-      },
-      methods: {
-        //请求列表全部数据
-        getAjax(transition){
-          const self = this
-          let successCallback =(response) => {
-            const jsondata = response.data
-            self.$route.router.app.loading = false
-            self.loadding.show = false
-            if(jsondata&&jsondata.code==0){
-              //实时异步队列更新数据
-              transition.next({
-                  loginpic:jsondata.data.advertisement,
-                  marketslist:jsondata.data.markets,
-                  goodslist:jsondata.data.goods,
-                  menu:{
-                    show:false,
-                    list:jsondata.data.goods
-                  },
-              })
-            }
-          }
-          let errorCallback = (json)=> {
-            //console.log(json)
-          }
-          let data = {
-              id:'001'
-          }
-          let options ={
-              name:'lei'
-          }
-          self.$http.get(configPath + 'home.json', [data]).then(successCallback, errorCallback)
-
-        }
+        loginpic: "",
+        menu: {
+          show: false,
+          list: []
+        },
+        marketslist: [],                      //特色市场模块数据
+        goodslist: []                         //全部市场模块数据
       }
+    },
+    components: {
+      Cover, Mask, Menuleft, HeadModule, LoginModule, ViewsModule, DownModule
+    },
+    route: {
+      data (transition) {
+        const self = this
+        //请求列表全部数据
+        self.getAjax(transition)
+        //滚动加载
+        //self.scrollList();
+      },
+      deactivate (transition) {
+        //$(window).off('scroll');
+        transition.next()
+      }
+    },
+    methods: {
+      //请求列表全部数据
+      getAjax(transition){
+        const self = this
+        let successCallback = (response) => {
+          const jsondata = response.data
+          self.$route.router.app.loading = false
+          self.loadding.show = false
+          if (jsondata && jsondata.code == 0) {
+            //实时异步队列更新数据
+            transition.next({
+              loginpic: jsondata.data.advertisement,
+              marketslist: jsondata.data.markets,
+              goodslist: jsondata.data.goods,
+              menu: {
+                show: false,
+                list: jsondata.data.goods
+              },
+            })
+          }
+        }
+        let errorCallback = (json) => {
+          //console.log(json)
+        }
+        let data = {
+          id: '001'
+        }
+        let options = {
+          name: 'lei'
+        }
+        self.$http.get(configPath + 'home.json', [data]).then(successCallback, errorCallback)
+
+      }
+    }
   }
 </script>
 
