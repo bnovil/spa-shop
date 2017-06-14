@@ -37,8 +37,22 @@
 <script>
 
   //加载局部业务组件
-  import MarketsModule from '../../views/home/markets.vue'//欢迎欢迎组件
-  import PromotionsModule from '../../views/home/promotions.vue'//秒杀倒计时组件
+//  import MarketsModule from '../../views/home/markets.vue'//欢迎欢迎组件
+//  import PromotionsModule from '../../views/home/promotions.vue'//秒杀倒计时组件
+//  import GoodsModule from '../../views/home/goods.vue'//商品组件
+//  import ShowcaseModule from '../../views/home/showcase.vue'//分类展示组件
+//  import DownModule from '../../views/home/down.vue'//外链下载APP组件
+//
+//  export default {
+//    props:['goods','markets'],
+//    components: {
+//      MarketsModule,PromotionsModule,GoodsModule,ShowcaseModule,DownModule
+//    },
+//  }
+
+
+//  import MarketsModule from '../../views/home/markets.vue'//欢迎欢迎组件
+//  import PromotionsModule from '../../views/home/promotions.vue'//秒杀倒计时组件
   import GoodsModule from '../../views/home/goods.vue'//商品组件
   import ShowcaseModule from '../../views/home/showcase.vue'//分类展示组件
   import DownModule from '../../views/home/down.vue'//外链下载APP组件
@@ -46,7 +60,7 @@
   export default {
     props:['goods','markets'],
     components: {
-      MarketsModule,PromotionsModule,GoodsModule,ShowcaseModule,DownModule
+      GoodsModule,ShowcaseModule,DownModule
     },
   }
 

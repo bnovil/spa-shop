@@ -31,10 +31,10 @@
     ],
     "goods": [
       {
-        "title": "上衣",
+        "title": "跑鞋",
         "mt": "10.933.r59313",
-        "type": "jacket",
-        "pic": "src/assets/images/goods/list/jacket.png",
+        "type": "run",
+        "pic": "src/assets/images/goods/list/cate1.jpg",
         "desc": "底价新品壁咚"
       },
       {
